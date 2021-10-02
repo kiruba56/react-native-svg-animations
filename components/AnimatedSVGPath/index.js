@@ -84,6 +84,7 @@ class AnimatedSVGPath extends Component {
     );
 
     Animated.sequence(animationsSequence).start(() => {
+      this.props.onDone&&this.props.onDone();
       if (loop) {
         this.animate();
       }
