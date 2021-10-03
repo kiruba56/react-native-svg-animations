@@ -109,7 +109,7 @@ class AnimatedSVGPath extends Component {
       transform,
     } = this.props;
     return (
-      <Svg height={height * scale + 5} width={width * scale + 5}>
+     <Svg height="100%" width="100%" viewBox={this.props.viewBox}>
         <Path
           strokeDasharray={dashArray || [this.length, this.length]}
           strokeDashoffset={this.strokeDashoffset}
